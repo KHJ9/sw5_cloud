@@ -1,0 +1,375 @@
+﻿<!-- 부트스트랩 기본 템플릿을 가져옴 -->
+	<?php include "header.html" ?>
+		<title>K water</title>
+		<div id="carousel-example-generic carousel-fixed" class="carousel slide" data-ride="carousel">
+		  <!-- Indicators -->
+		  <!--
+		  <ol class="carousel-indicators">
+			<li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+			<li data-target="#carousel-example-generic" data-slide-to="1"></li>
+			<li data-target="#carousel-example-generic" data-slide-to="2"></li>
+		  </ol>
+		  -->
+		  <!-- Wrapper for slides -->
+		  <div class="carousel-inner" role="listbox">
+			<div class="item active">
+			  <img src="/sw5/images/main_visual1.jpg" class="width100 fixed" alt="메인비주얼" >
+			  <div class="carousel-caption">
+				<h3 class="carousel-title1">새로운 시작</h3>
+				<p class="carousel-title2">잔잔한 물결이 설레인다</p>
+			  </div>
+			</div>
+			<!--
+			<div class="item">
+			  <img src="/sw5/images/sitemap_logo.png" class="width100" alt="메인비주얼">
+			  <div class="carousel-caption">
+				<h3 class="carousel-title1">메인비주얼 문구</h3>
+				<p class="carousel-title2">문구2</p>
+			  </div>
+			</div>
+			-->
+		  </div>
+
+		<!-- side-btn -->
+		<!--
+		  <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+			<span class="glyphicon glyphicon-chevron-left" aria-hidden="true">Previous</span>
+			<span class="sr-only">Previous</span>
+		  </a>
+		  <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+			<span class="glyphicon glyphicon-chevron-right" aria-hidden="true">Next</span>
+			<span class="sr-only">Next</span>
+		  </a>
+		 -->
+		</div>
+		<script>
+			$('.carousel').carousel({
+			  interval: 2000,
+			  keyboard: true
+			})
+		</script>
+		<!-- 첫 번째 컨텐츠 -->
+		<div class="contents1 container-fulid" style="transform:skewY(-20deg); background:white;">
+			<div class="container contents1-position" style="transform:skewY(20deg); padding-top:-200px;">
+				<div class="contents1-title">
+					<h3 class="contents1-title-h3">Global</h3>
+					<h3 class="contents1-title-h3">Water</h3>
+					<h3 class="contents1-title-h3">Professional</h3>
+					<p class="contents1-title-p" style="color:#333;">한국수자원공사는 수자원의 종합적 이용, 개발을 위한 시설의</p>
+					<p class="contents1-title-p" style="color:#333;">건설, 운영관리와 광역상수도 시설의 건설, 관리를 맡고</p>
+					<p class="contents1-title-p" style="color:#333;">있으며 산업단지 및 특수지역 개발을 담당하고 있습니다. </p>
+				</div>
+				
+				<!-- 각 박스의 높이, padding지정, main-visual 타이틀 디자인, 사이드바 이벤트 구현, main-visual 배경화면 고정 -->
+				
+				<div class="contents1-box">
+					<div class="cont1box-even col-xs-12">
+						<!--242, 255-->
+						<div class="cont1box-inner col-xs-5_9">
+							<a href="#">
+								<img src="" alt=""/>
+								<span>견학안내</span>
+							</a>
+						</div>
+						<div class="cont1box-inner col-xs-5_9">
+							<a href="#">
+								<img src="" alt=""/>
+								<span>조직도</span>
+							</a>
+						</div>
+					</div>
+					<div class="cont1box-odd col-xs-12">
+						<div class="cont1box-inner col-xs-5_9">
+							<a href="#">
+								<img src="" alt=""/>
+								<span>요금안내</span>
+							</a>
+						</div>
+						<div class="cont1box-inner col-xs-5_9">
+							<a href="#">
+								<img src="" alt=""/>
+								<span>물이야기</span>
+							</a>
+						</div>
+					</div>
+					<div class="cont1box-even col-xs-12">
+						<div class="cont1box-inner col-xs-5_9">
+							<a href="#">
+								<img src="" alt=""/>
+								<span>채용정보</span>
+							</a>
+						</div>
+						<div class="cont1box-inner col-xs-5_9">
+							<a href="#">
+								<img src="" alt=""/>
+								<span>50주년 기념관</span>
+							</a>
+						</div>
+					</div>
+					<div class="cont1box-odd cont1box-first col-xs-12">
+						<div class="cont1box-inner col-xs-5_9">
+							<a href="#">
+								<img src="/sw5/images/" alt=""/>
+								<span>고객광장</span>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- 두 번째 컨텐츠 -->
+		<div class="contents2 container-fulid" style="transform:skewY(20deg); margin:150px 0 -150px;">
+			<div style="height:50px;"></div>
+			<div class="container contents1-position" style="transform:skewY(-20deg);">
+				<div class="contents1-title overflow_hidden contents2-title">
+					<h3 class="contents1-title-h3 contents2-title-h3 float_left">What We Offer</h3>
+					<div class="float_left b_interval">
+						<p class="contents1-title-p">한국수자원공사는 수자원의 종합적 이용, 개발을 위한</p>
+						<p class="contents1-title-p">시설의 건설, 운영관리와 광역상수도 시설의 건설,</p>
+					</div>
+				</div>
+				<ul class="row contents2_boxset" style="margin-bottom:0; padding-bottom:0;">
+					<li class="col-lg-3 col-md-3 col-sm-6 col-xs-6 interval3 ">
+						<a href="#" class="contents2_box white_border 95per display_block overflow_hidden">
+							<img src="/sw5/images/contents2_icon1.png" alt="실시간 수자원 현황" class="float_left contents2_boxinner1"/>
+							<p class="float_left contents2_boxinner2">실시간 수자원 현황</p>
+						</a>
+					</li>
+					<li class="col-lg-3 col-md-3 col-sm-6 col-xs-6 interval3">
+						<a href="#" class="contents2_box white_border box_interval 100per display_block overflow_hidden">
+							<img src="/sw5/images/contents2_icon2.png" alt="토지 분양 안내" class="float_left contents2_boxinner1"/>
+							<p class="float_left contents2_boxinner2">토지 분양 안내</p>
+						</a>
+					</li>
+					<li class="col-lg-3 col-md-3 col-sm-6 col-xs-6 interval3">
+						<a href="#" class="contents2_box white_border box_interval 100per display_block overflow_hidden">
+							<img src="/sw5/images/contents2_icon3.png" alt="입찰 안내" class="float_left contents2_boxinner1"/>
+							<p class="float_left contents2_boxinner2">입찰 안내</p>
+						</a>
+					</li>
+					<li class="col-lg-3 col-md-3 col-sm-6 col-xs-6 interval3">
+						<a href="#" class="contents2_box white_border box_interval 100per display_block overflow_hidden">
+							<img src="/sw5/images/contents2_icon4.png" alt="K-WATER 마중물센터" class="float_left contents2_boxinner1"/>
+							<p class="float_left contents2_boxinner2">K-WATER 마중물센터</p>
+						</a>
+					</li>
+					<li class="col-lg-3 col-md-3 col-sm-6 col-xs-6 interval3">
+						<a href="#" class="contents2_box white_border box_interval 100per display_block overflow_hidden">
+							<img src="/sw5/images/contents2_icon5.png" alt="단비톡톡" class="float_left contents2_boxinner1"/>
+							<p class="float_left contents2_boxinner2">단비톡톡</p>
+						</a>
+					</li>
+					<li class="col-lg-3 col-md-3 col-sm-6 col-xs-6 interval3">
+						<a href="#" class="contents2_box white_border box_interval 100per display_block overflow_hidden">
+							<img src="/sw5/images/contents2_icon6.png" alt="공지사항" class="float_left contents2_boxinner1"/>
+							<p class="float_left contents2_boxinner2">공지사항</p>
+						</a>
+					</li>
+					<li class="col-lg-3 col-md-3 col-sm-6 col-xs-6 interval3">
+						<a href="#" class="contents2_box white_border box_interval 100per display_block overflow_hidden">
+							<img src="/sw5/images/contents2_icon7.png" alt="보도자료" class="float_left contents2_boxinner1"/>
+							<p class="float_left contents2_boxinner2">보도자료</p>
+						</a>
+					</li>
+					<li class="col-lg-3 col-md-3 col-sm-6 col-xs-6 interval3">
+						<a href="#" class="contents2_box white_border box_interval 100per display_block overflow_hidden">
+							<img src="/sw5/images/contents2_icon8.png" alt="분양정보" class="float_left contents2_boxinner1"/>
+							<p class="float_left contents2_boxinner2">분양정보</p>
+						</a>
+					</li>
+				</ul>
+			</div>
+			<div class="contents2_subback" style="height:300px; width:100%; background:#0f1f57;"></div>
+		</div>
+		<!-- 세 번째 컨텐츠 -->
+		<div class="contents3 container-fulid" style="padding-top:250px;">
+			<div class="container contents1-position">
+				<div class="contents1-title">
+					<h3 class="contents1-title-h3">If You</h3>
+					<h3 class="contents1-title-h3">Want More</h3>
+					<h3 class="contents1-title-h3">Information</h3>
+					<p class="contents1-title-p">한국수자원공사의</p>
+					<p class="contents1-title-p">새소식을 전해드립니다</p>
+				</div>
+				
+				
+				
+				<!-- 상자 수정 -->
+				
+				
+				
+				<!-- 각 박스의 높낮이, 이미지 삽입, relative, 파란색 배경, .. -->				
+				<div class="contents3-box row">
+					<div class="col-lg-3 col-md-3 col-sm-6 col-xs-6 contents3-news">
+						<div class="contents3-newsbox" style="background-size:100% 100%;"> <!-- 이미지 배경화면 -->
+							<a href="javascript:void(0);">
+								<p class="contents3_category1">기술원 뉴스</p> <!-- relative -->
+								<div class="contents3_newsboxhover"> <!--  relative -->
+									<p class="contents3_newstitle">뉴스기사1..</p>
+									<span class="contents3_newsdate">2018.08.23</span>
+									<p class="contents3_newsbtn">자세히 보기&nbsp;&nbsp;&nbsp;+</p>
+								</div>
+							</a>
+						</div>
+					</div>
+					<div class="col-lg-3 col-md-3 col-sm-6 col-xs-6 contents3-photo">
+						<div class="contents3-photobox" style="background-size:100% 100%;"> <!-- 이미지 배경화면 -->
+							<a href="#">
+								<p class="contents3_category2">기술원 뉴스</p> <!-- relative -->
+								<div class="contents3_photoboxhover"> <!--  relative -->
+									<p class="contents3_phototitle">뉴스기사1..</p>
+									<span class="contents3_photodate">2018.08.23</span>
+									<p class="contents3_photobtn">자세히 보기&nbsp;&nbsp;&nbsp;+</p>
+								</div>
+							</a>
+						</div>
+					</div>
+					
+					<!-- hover script,  -->
+					<script>
+						$(function(){
+							$(".contents3_newsboxhover").hover(
+								function(){
+									$(this).css("background-color", "#0f2a8d");
+									$(this).children().css("display", "block");
+								},function(){
+									$(this).css("background-color", "transparent");
+									$(this).children().css("display", "none");
+								}
+							);
+							$(".contents3_photoboxhover").hover(
+								function(){
+									$(this).css("background-color", "#0f2a8d");
+									$(this).children().css("display", "block");
+								},function(){
+									$(this).css("background-color", "transparent");
+									$(this).children().css("display", "none");
+								}
+							);							
+						});
+					</script>
+					<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+						<!-- 리스트 -->
+						<div class="contents3_tab">
+							<div role="tabpanel">
+							  
+							  <!-- Nav tabs -->
+							  <ul class="nav nav-tabs" role="tablist">
+								<li role="presentation" class="active"><a href="#contents3_tab1" aria-controls="home" role="tab" data-toggle="tab">공지사항</a></li>
+								<li role="presentation"><a href="#contents3_tab2" aria-controls="profile" role="tab" data-toggle="tab">채용공고</a></li>
+							  	<a href="#" class="contents3_detailbtn">+</a>
+							  </ul>
+
+							  <!-- Tab panes -->
+							  <div class="tab-content">
+								<div role="tabpanel" class="tab-pane active" id="contents3_tab1">
+									<ul>
+										<li class="contents3_tablist">
+											<a href="#">
+												<span class="contents3_date1">29</span>
+												<span class="contents3_date2">
+													<span class="contents3_month">Jun.</span>
+													<span class="contents3_year">2018</span>
+												</span>
+												<p class="contents3_title">항공안전기술원 「2018 공공기관 혁신계획」</p>
+											</a>
+										</li>
+										<li class="contents3_tablist">
+											<a href="#">
+												<span class="contents3_date1">29</span>
+												<span class="contents3_date2">
+													<span class="contents3_month">Jun.</span>
+													<span class="contents3_year">2018</span>
+												</span>
+												<p class="contents3_title">항공안전기술원 「2018 공공기관 혁신계획」</p>
+											</a>
+										</li>
+										<li class="contents3_tablist">
+											<a href="#">
+												<span class="contents3_date1">29</span>
+												<span class="contents3_date2">
+													<span class="contents3_month">Jun.</span>
+													<span class="contents3_year">2018</span>
+												</span>
+												<p class="contents3_title">항공안전기술원 「2018 공공기관 혁신계획」</p>
+											</a>
+										</li>
+									</ul>
+								</div>
+								<div role="tabpanel" class="tab-pane" id="contents3_tab2">
+									<ul>
+										<li class="contents3_tablist">
+											<a href="#">
+												<span class="contents3_date1">30</span>
+												<span class="contents3_date2">
+													<span class="contents3_month">Jun.</span>
+													<span class="contents3_year">2018</span>
+												</span>
+												<p class="contents3_title">항공안전기술원 「2018 공공기관 혁신계획」</p>
+											</a>
+										</li>
+										<li class="contents3_tablist">
+											<a href="#">
+												<span class="contents3_date1">30</span>
+												<span class="contents3_date2">
+													<span class="contents3_month">Jun.</span>
+													<span class="contents3_year">2018</span>
+												</span>
+												<p class="contents3_title">항공안전기술원 「2018 공공기관 혁신계획」</p>
+											</a>
+										</li>
+										<li class="contents3_tablist">
+											<a href="#">
+												<span class="contents3_date1">30</span>
+												<span class="contents3_date2">
+													<span class="contents3_month">Jun.</span>
+													<span class="contents3_year">2018</span>
+												</span>
+												<p class="contents3_title">항공안전기술원 「2018 공공기관 혁신계획」</p>
+											</a>
+										</li>
+									</ul>
+								</div>
+							  </div>
+
+							</div>
+						</div>
+							
+						<!-- 광고패널(캐러셀) -->
+						<div id="carousel-example-generic" class="carousel slide contents3_carousel" data-ride="carousel">
+						  <!-- Indicators -->
+						  <ol class="carousel-indicators user_indicators">
+							<li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+							<li data-target="#carousel-example-generic" data-slide-to="1"></li>
+						  </ol>
+
+						  <!-- Wrapper for slides -->
+						  <div class="carousel-inner" role="listbox">
+							<div class="item active sub_carousel">
+							  <img src="/sw5/images/sub_carousel1.jpg" alt="정부혁신 홈페이지">
+							  <div class="carousel-caption user_caption">
+								...
+							  </div>
+							</div>
+							<div class="item sub_carousel">
+							  <img src="/sw5/images/sub_carousel2.jpg" alt="쇼핑관광축제">
+							  <div class="carousel-caption user_caption">
+								...
+							  </div>
+							</div>
+						  </div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="container-fluid cont3_sub" style="height:auto; padding:150px 0; background-color:#c79cb8;">
+			<div class="container">
+				<div class="company_name">
+					<p class="company_korname">한국수자원공사</p>
+					<span class="company_engname">K water</span>
+				</div>
+			</div>
+		</div>
+		
+	<?php include "footer.html" ?>

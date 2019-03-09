@@ -1,0 +1,63 @@
+<!-- 사이드바(width 1000이하일 시 display:none) -->
+<div class="col-lg-2 col-md-2 side_barframe">
+	<ul> <!-- 사이드바 메뉴 -->
+		<li class="side_bar" id="side_bar">
+			<a href="javascript:void(0);" class="side_bartitle">열린경영<span>+</span></a>
+			<ul class="side_barcontents">
+				<li><a href="#">물 이야기</a></li>
+				<li><a href="#">CEO 인사말</a></li>
+				<li><a href="#">조직 및 연락처</a></li>
+			</ul>
+		</li>
+		<li class="side_bar" id="side_bar">
+			<a href="javascript:void(0);" class="side_bartitle">고객센터<span>+</span></a>
+			<ul class="side_barcontents">
+				<li><a href="#">고객광장</a></li>
+				<li><a href="#">견학안내</a></li>
+				<li><a href="#">요금안내</a></li>
+			</ul>
+		</li>
+		<li class="side_bar" id="side_bar">
+			<a href="javascript:void(0);" class="side_bartitle">새소식<span>+</span></a>
+			<ul class="side_barcontents">
+				<li><a href="#">공지사항</a></li>
+				<li><a href="#">채용정보</a></li>
+				<li><a href="#">보도자료</a></li>
+				<li><a href="#">분양정보</a></li>
+				<li><a href="#">50주년 기념관</a></li>
+			</ul>
+		</li>
+		<script>
+			$(function(){							
+				if((sub_num >= 1) && (sub_num <= 3)){
+					$(".side_bar:nth-child(1)").find(".side_barcontents").show();
+					$(".side_bar:nth-child(1)").find("span").html("-");
+				} else if ((sub_num >= 4) && (sub_num <= 6)){
+					$(".side_bar:nth-child(2)").find(".side_barcontents").show();
+					$(".side_bar:nth-child(1)").find("span").html("-");
+				} else {
+					$(".side_bar:nth-child(3)").find(".side_barcontents").show();
+					$(".side_bar:nth-child(1)").find("span").html("-");
+				}
+				$(".side_bar:nth-child(1)").hover(function(){
+					if(!((sub_num >= 1) && (sub_num <= 3))){ 
+						$(this).find(".side_barcontents").slideToggle();
+					}
+					//$(this).find("span").html("-");
+				});
+				$(".side_bar:nth-child(2)").hover(function(){
+					if(!((sub_num >= 4) && (sub_num <= 6))){ 
+						$(this).find(".side_barcontents").slideToggle();
+					}
+					//$(this).find("span").html("-");
+				});
+				$(".side_bar:nth-child(3)").hover(function(){
+					if(!((sub_num >= 7) && (sub_num <= 11))){ 
+						$(this).find(".side_barcontents").slideToggle();
+					}
+					//$(this).find("span").html("-");
+				});
+			});
+		</script>
+	</ul>
+</div>

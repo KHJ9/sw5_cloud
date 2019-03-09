@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="icon" href="/sw5/images/logo.png"/>
+		
+		<!-- 부트스트랩 -->
+		<link href="/sw5/css/bootstrap.min.css" rel="stylesheet">
+		<!-- jQuery (부트스트랩의 자바스크립트 플러그인을 위해 필요합니다) -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+		<!-- 모든 컴파일된 플러그인을 포함합니다 (아래), 원하지 않는다면 필요한 각각의 파일을 포함하세요 -->
+		<script src="js/bootstrap.min.js"></script>
+		
+		<!-- font awesome -->
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+		
+		<!-- css 파일 -->
+		<link href="/sw5/css/common.css" rel="stylesheet">
+		<link href="/sw5/css/water.css" rel="stylesheet">
+	</head>
+	<body>
+		<nav class="navbar navbar-default navbar-fixed-top kwater_nav">
+		  <div class="container-fluid">
+			<!-- Brand and toggle get grouped for better mobile display -->
+			<div class="navbar-header navbar-left">
+			  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+			  	<img src="/sw5/images/sitemap_logo.png" alt="sitemap logo"/>
+				<!--
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				-->
+			  </button>
+			  <a class="navbar-brand" href="index.html">
+				<img src="/sw5/images/logo.png" class="navbar-brandimg" alt="K water"/>
+			  </a>
+			</div>
+
+			<!-- Collect the nav links, forms, and other content for toggling -->
+			<div class="collapse navbar-collapse navbar-col" id="bs-example-navbar-collapse-1">
+			  <ul class="nav navbar-nav navbar-center">
+			    <li class="depth1 depth1-left"><a href="#" class="depth1-btn depth1_1">열린경영</a></li>
+				<li class="depth1"><a href="#" class="depth1-btn depth1_2">고객센터</a></li>
+				<li class="depth1 depth1-right"><a href="#" class="depth1-btn depth1_3">새소식</a></li>
+			  </ul>
+			  <ul class="nav navbar-nav navbar-right">
+				<li class="side-btn">
+				  <button type="button" class="btn btn-default navbar-btn">
+					<img src="/sw5/images/index_logo.png" alt="index logo"/>
+				  </button>
+				</li class="side-btn">
+				<li>
+				  <button type="button" class="btn btn-default navbar-btn">
+					<img src="/sw5/images/search_logo.png" alt="search logo"/>
+				  </button>
+				</li class="side-btn">
+				<li>
+				  <button type="button" class="btn btn-default navbar-btn">
+					<img src="/sw5/images/sitemap_logo.png" alt="sitemap logo"/>
+				  </button>
+				</li>
+			  </ul>
+			</div><!-- /.navbar-collapse -->
+		  </div><!-- /.container-fluid -->
+		  <div class="container-fluid depth2" style="height:180px;">
+			<div class="container depth2_container">
+				<div class="depth2_internal">
+					<div class="depth2_1">
+						<div class="depth2_desc">
+							<h3 class="depth2_title">열린경영</h3>
+							<p class="depth2_cont">물종합서비스 기업, K-water에 오신 걸 환영합니다.</p>
+						</div>
+						<ul class="depth2_list">
+							<li><a href="sub1.html">물 이야기</a></li>
+							<li><a href="#">CEO 인사말</a></li>
+							<li><a href="#">조직 및 연락처</a></li>
+						</ul>
+						<img src="" alt="a"/>
+					</div>
+					<div class="depth2_2">
+						<div class="depth2_desc">
+							<h3 class="depth2_title">고객센터</h3>
+							<p class="depth2_cont">고객중심의 경영을 실천합니다.</p>
+						</div>
+						<ul class="depth2_list">
+							<li><a href="#">고객광장</a></li>
+							<li><a href="#">견학안내</a></li>
+							<li><a href="#">요금안내</a></li>
+						</ul>
+						<img src="" alt=""/>
+					</div>
+					<div class="depth2_3">
+						<div class="depth2_desc">
+							<h3 class="depth2_title">새소식</h3>
+							<p class="depth2_cont">내일이 더욱 기대되는 기업, K-water입니다.</p>
+						</div>
+						<ul class="depth2_list">
+							<li><a href="#">공지사항</a></li>
+							<li><a href="#">채용정보</a></li>
+							<li><a href="#">보도자료</a></li>
+							<li><a href="#">분양정보</a></li>
+							<li><a href="#">50주년 기념관</a></li>
+						</ul>
+						<img src="" alt="" class="depth2_img"/>
+					</div>
+				</div>
+				<script>
+					$(function(){
+						
+						// 최소 넓이가 768이 아닌 경우 이 jquery를 사용하지 않습니다.
+						// -> hover 대신 click으로 사용한다.
+						// 다른 스타일의 2depth를 디자인한다.
+						$(".depth1_1").hover(
+							function(){ 
+								$(".depth2").css("display", "block");
+								$(".depth2_1").css("display", "block");
+								$(".depth2_2").css("display", "none");
+								$(".depth2_3").css("display", "none");
+							}, function(){ 
+								$(".depth2_1 li a").mouseout(function(){
+									$(".depth2").css("display", "none"); $(".depth2_1").css("display", "none");
+								});
+							}
+						);
+						
+						$(".depth1_2").hover(
+							function(){ 
+								$(".depth2").css("display", "block");
+								$(".depth2_1").css("display", "none");
+								$(".depth2_2").css("display", "block");
+								$(".depth2_3").css("display", "none");
+							}, function(){ 
+								$(".depth2_2 li a").mouseout(function(){
+									$(".depth2").css("display", "none"); $(".depth2_2").css("display", "none");
+								});
+							}
+						);
+						
+						$(".depth1_3").hover(
+							function(){ 
+								$(".depth2").css("display", "block");
+								$(".depth2_1").css("display", "none");
+								$(".depth2_2").css("display", "none");
+								$(".depth2_3").css("display", "block");
+							}, function(){ 
+								$(".depth2_3 li a").mouseout(function(){
+									$(".depth2").css("display", "none"); $(".depth2_3").css("display", "none");
+								});
+							}
+						);
+						
+					});
+				</script>
+			</div>
+		  </div>
+		</nav>
+		<!-- 슬라이드바가 일정 수준으로 내려오면 nav의 색상을 변경하고 navbar-fixed-top을 추가한다. -->
+		<script>
+			$(function(){
+				$(window).scroll(function(){
+					if($(this).scrollTop() >= 90){ 
+						$(".navbar-brandimg").attr("src", "/sw5/images/white_logo.png"); 
+						//$(".navbar-brandimg").css("height", "80px"); 
+						$(".kwater_nav").css("border", "0 none");
+						$(".kwater_nav").css("background-color", "#015697");
+						$(".kwater_nav").css("position", "fixed");
+						$(".kwater_nav").css("animation-duration", "0.5s");
+					} else{ 
+						$(".navbar-brandimg").attr("src", "/sw5/images/logo.png"); 
+						$(".kwater_nav").css("border", "0 none");
+						$(".kwater_nav").css("border-bottom", "1px solid #fff");
+						$(".kwater_nav").css("background-color", "transparent");
+						$(".kwater_nav").css("position", "absolute");
+						$(".kwater_nav").css("animation-duration", "0.5s");
+					}
+				});
+			});
+		</script>

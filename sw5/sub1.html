@@ -1,0 +1,142 @@
+﻿<?php include "header.html" ?>
+	<title id="title_name">물이야기</title>
+	<div class="sub_visual">
+		<h3>열린경영</h3>
+		<p></p>
+		<span>내일이 더욱 기대되는 기업, K-water입니다.</span>
+	</div>
+	<div class="container-fluid" style="height:50px;">
+		<div class="container sub_menu">
+			<div class="sub_menu2"><a href="/sw5/index.html"><i class="fas fa-heading"></i></a></div>
+			<div class="sub_menu2"><a href="#">>&nbsp;&nbsp;&nbsp;열린경영</a></div>
+			<div class="sub_menu2"><a href="#">>&nbsp;&nbsp;&nbsp;물이야기</a></div>
+			<div class="sub_menu3"><a href="#"><i class="fas fa-print"></i></a></div>
+			<div class="sub_menu3">
+				<a href="javascript:void(0);" class="share_btn"><i class="fas fa-share-square"></i></a>
+				<div class="sub_share">
+					<form id="myform" style="display:none;"><!-- 공유 정보(네이버) -->
+						URL입력:  <input type="text" id="url" value="<?=$_SERVER["HTTP_HOST"].$_SERVER['PHP_SELF'];?>"><br/>
+						Title입력:  <input type="text" id="title" name="naver_sharetitle" value=""><br/>
+					</form>
+					<div id="shareBtn" class="share_to_facebook btn clearfix"></div>
+					<a class="twitter-share-button share_to_twitter" link rel="canonical" href="javascript:void(0);" onClick="share_to_twitter();"></a>
+					<input type="button" onclick="share()" class="share_to_naver"/>
+					<input type="button" onclick="javascript:void(0);" class="share_close"/>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script>
+		// 공유하기 기능 script
+		
+		/*
+			페이스북, 트위터의 버튼 레이아웃 수정
+			트위터 url 수정
+			https://developer.twitter.com/en/docs/twitter-for-websites/tweet-button/overview
+		*/
+		
+		// slide
+		$(function(){
+			$(".share_btn").click(function(){
+				$(".sub_share").fadeIn(500);
+			});
+			$(".share_close").click(function(){
+				$(".sub_share").fadeOut(500);
+			});
+		});
+		
+		// 페이스북 공유하기 api
+		
+		/* api 기본설정 */
+		document.getElementById('shareBtn').onclick = function() {
+			FB.init({
+				appId            : 263290014295840,
+				autoLogAppEvents : true,
+				xfbml            : true,
+				version          : 'v3.2'
+			});
+			FB.ui(
+				{
+					method: 'share',
+					mobile_iframe: true,
+					display: 'popup',
+					href: 'https://developers.facebook.com/docs/',
+					redirect_uri: '<?=$_SERVER['HTTP_HOST'].$_SERVER['PHP_SELF']?>',
+				},
+				// callback
+				function(response) {
+					if (response && !response.error_message) {
+						alert('Posting completed.');
+					} else {
+						alert('Error while posting.');
+					}
+				}
+			);
+		};
+		(function(d, s, id){
+			var js, fjs = d.getElementsByTagName(s)[0];
+			if (d.getElementById(id)) {return;}
+			js = d.createElement(s); js.id = id;
+			js.src = "https://connect.facebook.net/en_US/sdk.js";
+			fjs.parentNode.insertBefore(js, fjs);
+		}(document, 'script', 'facebook-jssdk'));
+		
+		var facebook_share = "https://www.facebook.com/dialog/share?";
+		facebook_share += "app_id=145634995501895";
+		facebook_share += "&display=popup";
+		facebook_share += "&href=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2F";
+		facebook_share += "&redirect_uri=https%3A%2F%2Fdevelopers.facebook.com%2Ftools%2Fexplorer";
+		
+		// 트위터 공유하기 api
+		function share_to_twitter(){
+			var twitter_url = "https://twitter.com/intent/tweet?original_referer=https%3A%2F%2F";
+			twitter_url += "<?=$_SERVER['HTTP_HOST'].$_SERVER['PHP_SELF']?>";
+			twitter_url += "&ref_src=twsrc%5Etfw";
+			twitter_url += "&text="+document.title; // 페이지 타이틀명
+			twitter_url += "&tw_p=tweetbutton";
+			twitter_url += "&url=http%3A%2F%2F"+"<?=$_SERVER['HTTP_HOST'].$_SERVER['PHP_SELF']?>"; // 페이지 url
+			window.open(twitter_url, "공유하기", "width=800, height=250, toolbar=no, menubar=no, scrollbars=no, resizable=yes"); // 새 창에서 열기
+		}
+		
+		// 네이버 공유하기 api
+		function share() {
+		  var get_title = document.title;
+		  var alter_title = document.getElementById("title").value = get_title;
+		  var url = encodeURI(encodeURIComponent(myform.url.value));
+		  var title = encodeURI(myform.title.value);
+		  var shareURL = "https://share.naver.com/web/shareView.nhn?url=" + url + "&title=" + title;
+		  //document.location = shareURL;
+		  window.open(shareURL, "공유하기", "width=800, height=700, toolbar=no, menubar=no, scrollbars=no, resizable=yes" ); // 새 창에서 열기
+		}
+	</script>
+	<div class="container-fluid" style="height:auto;">
+		<div class="container row sub_window">
+			<!-- 사이드바 -->
+			<script> var sub_num = 1; </script>
+			<?php include "sub_bar.html" ?>
+			<!-- 서브컨텐츠 -->
+			<div class="col-lg-10 col-md-10 col-sm-12 col-xs-12 sub_contframe">
+				<div class="sub_contents">
+					<h3 class="sub_conttitle">물 이야기</h3>
+					<h4 class="sub_conttitle2">"건강한 물"에 대한 정의</h4>
+					
+					<ul class="sub_contcube">
+						<li>안전하고 깨끗하면서 인체에 유익한 미네랄 성분이 균형 있게 포함된 물</li>
+						<li>일반적으로 물 냄새가 나지 않고 물 속에 녹아 있는 산소의 양(용존산소 : dissolved oxygen)이 충분하여 음용 시 청량감을 느낄 수 있는 물
+						* 용존산소 5mg/L 이상</li>
+					</ul>
+
+					<p class="sub_contplain">
+					<strong>세계보건기구(WHO)</strong>는 "깨끗한 물은 사람의 건강을 증진시킨다" 라고 물이 인체에 미치는 영향에 대해 강조하였으며, 100세 이상 장수하기로 유명한 지방의 사람들은
+					한결같이 "물 맑고 공기 좋은 청정지역의 삶이 장수하기에 최고의 조건이다" 라고 함
+					</p>
+					
+					
+					
+				</div> <!-- 서브메뉴 내 세분화 버튼 -->
+				<div></div> <!--  -->
+				<?php include "comment.html" ?>
+			</div>
+		</div>
+	</div>
+<?php include "footer.html" ?>

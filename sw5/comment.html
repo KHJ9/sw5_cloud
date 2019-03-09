@@ -1,0 +1,52 @@
+﻿<div class="comment_bar">
+	<div class="comment_title">
+		<h4>홈페이지 만족도</h4>
+		<p>콘텐츠 내용에 만족하십니까? 현재 페이지의 만족도를 평가해 주십시요. 의견을 수렴하여 빠른 시일 내에 반영하겠습니다.</p>
+	</div>
+	<form name="comment_form" method="post" class="comment_form" onSubmit="return comment_check();" action="comment_insert.html">
+		<fieldset>
+			<legend>코멘트 입력폼</legend>
+			<div class="comment_formtitle">
+				<h4>개선의견</h4>
+			</div>
+			<div class="comment_formcont">
+				<div>
+					<input type="radio" name="star" id="star" value="5"/>
+					<img src="/sw5/images/img_star05.gif" alt="star5"/>
+					<label for="star">5점</label>
+					<input type="radio" name="star" id="star" value="4"/>
+					<img src="/sw5/images/img_star04.gif" alt="star4"/>
+					<label for="star">4점</label>
+					<input type="radio" name="star" id="star" value="3"/>
+					<img src="/sw5/images/img_star03.gif" alt="star3"/>
+					<label for="star">3점</label>
+					<input type="radio" name="star" id="star" value="2"/>
+					<img src="/sw5/images/img_star02.gif" alt="star2"/>
+					<label for="star">2점</label>
+					<input type="radio" name="star" id="star" value="1"/>
+					<img src="/sw5/images/img_star01.gif" alt="star1"/>
+					<label for="star">1점</label>
+				</div>
+				<input type="textarea" name="comments" placeholder="개선에 대한 자세한 내용을 입력해주세요"/>
+			</div>
+			<div class="comment_formbtn">
+				<input type="submit" value="평가하기"/>
+			</div>
+		</fieldset>
+	</form>
+	<script>
+		function comment_check(){
+			if(document.comment_form.star.value == ''){
+				alert("평점을 입력해 주세요");
+				return false;
+			}
+			if(document.comment_form.comments.value == ''){
+				alert("코멘터리를 입력해 주세요");
+				document.comment_form.comments.focus();
+				return false;
+			}
+			if(confirm("등록하시겠습니까?") == false) return false;
+			return true;
+		}
+	</script>
+</div> <!-- 홈페이지 만족도 댓글란.html -->
